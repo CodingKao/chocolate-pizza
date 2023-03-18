@@ -36,14 +36,17 @@ nav {
     background-image: url('img/hr-img.png');
     padding: 5px 0;
     border: none;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin: 25px 0;
 }
 
 h2 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 35px;
     font-weight: bold;
+}
+
+.BlogTop{
+    margin-top: 25px ;
 }
 
 .BlogTop div {
@@ -70,14 +73,94 @@ h2 {
 
 .list {
     background-image: url(img/list-bg.png);
-    padding: 50px;
+    /* background-repeat: no-repeat; */
+    object-fit: fill;
+    padding: 45px 50px;
     display: flex;
+    width: 100%;
 }
 
 .list .items {
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding-right: 50px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 20px;
+}
+
+.list .items div{
+    margin-bottom: 10px;
+}
+input[type="checkbox"]{
+    accent-color: rgb(254,251,234);
+    /* appearance: none; */
+    background-color: rgb(254,251,234);
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid rgba(128, 128, 128, 0.7);
+    border-radius: 4px;
+}
+label{
+    color: rgb(104, 103, 103);
+}
+
+input:checked + label{
+    text-decoration: line-through;
+}
+
+.BlogBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.authorInfo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
-    margin-right: 75px;
-    font-family: 'Edu NSW ACT Foundation', cursive;
-    font-family: 'Noto Serif Lao', serif;
+    padding-left: 8px;
+    padding-right: 30px;
 }
+
+.authorInfo h3{
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 19px;
+    color: rgb(69, 69, 69);
+}
+
+.BlogBottom button{
+    background-color: rgb(250, 141, 114);
+    color: #fff;
+    width: 25%;
+    padding: 15px 15px;
+    border: none;
+}
+
+footer{
+    color: #999
+}
+
+/* credit to https://stackoverflow.com/questions/14202089/custom-hr-with-image-character-in-the-center */
+
+hr.footerLogo{
+    margin: 45px 0;
+    border-top: 1px solid rgba(153, 153, 153, 0.20);
+}
+
+hr.footerLogo::after{
+    content: url(./img/small-logo.png);
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    /* Controls the whitespace around the symbol */
+    padding: 5px;
+    background: #fff;
+}
+
+footer p{
+    text-align: center;
+}
+
+
